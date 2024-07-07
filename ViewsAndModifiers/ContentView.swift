@@ -16,10 +16,9 @@ struct CoolTitle: ViewModifier {
         content
             .font(.largeTitle)
             .fontWeight(.bold)
-            .foregroundColor(.white)
+            .foregroundColor(.blue)
             .padding(.maximum(40, 40))
-            .background(.primary)
-            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            .shadow(radius: 5)
             .multilineTextAlignment(.center)
             .clipShape(.ellipse)
     }
@@ -34,7 +33,7 @@ extension View {
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Traditional Hello World")
+            Text("Large, blue font suitable for prominent titles.")
                 .coolTitleStyle()
             Image(systemName: "globe")
                 .imageScale(.large)
